@@ -1,0 +1,73 @@
+INSERT INTO customer (
+	customer_id,
+	fullname,
+	address
+) VALUES (
+	1,
+    'PatrickB',
+    '555 Downing ST'
+);
+
+INSERT INTO customer (
+	customer_id,
+	fullname,
+    address
+) VALUES (
+	2,
+	'Chris',
+	'56 Main St'
+);
+
+INSERT INTO movies (
+    movie,
+    customer_id,
+    theater_number
+) VALUES (
+    1,
+    1,
+    2
+);
+INSERT INTO movies (
+    movie,
+    customer_id,
+    theater_number
+) VALUES (
+    2,
+    2,
+    1
+);
+INSERT INTO concessions (
+    concession_stand,
+    customer_id,
+    amount_paid
+) VALUES (
+    1,
+    2,
+    18.99
+);
+INSERT INTO concessions (
+    concession_stand,
+    customer_id,
+    amount_paid
+) VALUES (
+    2,
+    1,
+    22.99);
+INSERT INTO tickets (
+    ticket_id,
+    customer_id,
+    movie
+) VALUES (
+    365,
+    1,
+    2
+);
+INSERT INTO tickets (
+    ticket_id,
+    customer_id,
+    movie
+) VALUES (
+    444,
+    2,
+    1
+);

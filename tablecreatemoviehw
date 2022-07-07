@@ -1,0 +1,28 @@
+CREATE TABLE IF NOT EXISTS customer (
+    customer_id SERIAL PRIMARY KEY,
+    fullname VARCHAR(255),
+    address VARCHAR(255)
+);
+
+CREATE TABLE IF NOT EXISTS movies(
+    movie SERIAL PRIMARY KEY,
+    customer_id INTEGER,
+    theater_number INTEGER,
+    FOREIGN KEY (customer_id) REFERENCES customer(customer_id)
+    );
+    
+CREATE TABLE IF NOT EXISTS tickets (
+    ticket_id INTEGER,
+    customer_id INTEGER,
+    movie INTEGER,
+    FOREIGN KEY (customer_id) REFERENCES customer(customer_id),
+	FOREIGN KEY (movie) REFERENCES movies(movie)
+    );
+    
+CREATE TABLE IF NOT EXISTS concessions (
+    concession_stand INTEGER,
+    customer_id INTEGER,
+    amount_paid FLOAT,
+    FOREIGN KEY (customer_id) REFERENCES customer(customer_id)
+    );
+    
